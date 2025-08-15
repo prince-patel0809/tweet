@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-sl8l3lz4=kgl9t46o9i!qx5ip8h_4heqrqrko&s5&q$h+6^y2('
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -137,3 +137,7 @@ LOGIN_URL = '/accounts/login'
 LOGIN_REDIRECT_URL = '/tweet/'
 
 LOGOUT_REDIRECT_URL = '/tweet/'
+
+CSRF_TRUSTED_ORIGINS=[
+    'https://tweet-242j.onrender.com'
+]
