@@ -1,18 +1,15 @@
 {
+    "version": 2,
     "builds": [
         {
-            "src": "tweetest/wsgi.py",
-            "use": "@vercel/python",
-            "config": {
-                "maxLamdaSize": "15mb",
-                "runtime": "python3.13.6"
-            }
+            "src": "serverless.py",
+            "use": "@vercel/python"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest": "tweetest/wsgi.py"
+            "dest": "serverless.py"
         }
     ]
 }
