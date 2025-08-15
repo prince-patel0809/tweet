@@ -1,0 +1,12 @@
+{% extends "layout.html" %}
+
+    {% block contant %}
+    <div class="container-fluid vh-100 d-flex flex-column justify-content-center align-items-center text-center">
+        <h1 class="display-3 fw-bold mb-4">Welcome to <span class="text-primary">Tweet</span> 🐦</h1>
+        <p class="lead mb-5">Express your thoughts, one tweet at a time!</p>
+        <h4 class="text-center mb-4"><i>" Jo likho dil se likho "</i></h4>
+        <a href="{% url 'tweet_list'%}" class="btn btn-lg btn-outline-light px-5 py-3 fw-semibold shadow-sm border-3 border-primary">
+            🚀 Get Started
+        </a>
+    </div>
+    {% endblock  %}

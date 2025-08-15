@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+Tweet-Delete
+{% endblock %}
+
+{% block contant %}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 100vh;">
+    <div class="p-5  border rounded shadow" style="min-width: 350px;">
+
+        <h4 class="text-center text-danger mb-4">
+            <b>Are you sure you want to delete this tweet?</b>
+        </h4>
+
+        <form method="post">
+            {% csrf_token %}
+            <div class="d-flex justify-content-center align-items-center gap-4">
+                <button class="btn btn-danger">Delete</button>
+                <a class="btn btn-success" href="{% url 'tweet_list' %}">Back to Home</a>
+            </div>
+        </form>
+        
+    </div>
+</div>
+{% endblock %}
